@@ -7,43 +7,44 @@ var curr_year = today.getFullYear();
 
 $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
-var resultString = "";
 
 function daysLeft() {
 	var a = $( "#datepicker" ).datepicker('getDate').getTime();
-	var b = today.getTime();
-	// c = hours per day * minutes per hour * seconds per minute * ms per sec
-	var c = 24*60*60*1000;
+	// solutions for 9, 10, 11 and 12 go here:
 
-	// here we use the native Math object to solve a problem:
-	var diffDays = Math.round((a - b)/c);
+	_____
+	_____
+	_____
 
-	if( $('input').val() ){
-		if (diffDays < 0 ) {
-			resultString = "<p>Please pick a date in the future.</p>";
-		} else if (diffDays === 1){
-			resultString = ("<p>You only have ONE day left until " + $('input').val() + "!</p>");
-		} else {
-			resultString = ("<p>You have " + diffDays + " days left until " + $('input').val() + "!</p>");
-		}
-	} else {
-		if (diffDays < 0 ) {
-			resultString = "<p>Please pick a date in the future.</p>";
-		} else if (diffDays === 1){
-			resultString = ("<p>You only have ONE day left!</p>");
-		} else {
-			resultString = ("<p>You have " + diffDays + " days left!");
-		}
-	}
-	// return diffDays;
-};
+	// we will remove this later:
+	return a;
+}
 
-$("#datepicker").on("change", function(){
+
+$("#datepicker").on("change", function(a){
 	daysLeft();
-	$("#result").html(resultString);
+	console.log(a);
 });
 
-$("button").click(function(){
-	$("#result").addClass("showResult");
-});
+
+
+// 9. For the second variable, you need to call getTime on your today variable
+
+// 10. Now we need a variable to store the difference in days between today and the end date selected by the user.
+// Basically, we need to subtract b from a
+
+
+// 11. SPOILER ALERT!  If you've done it correctly, you will get a difference in milliseconds, which is not what we want.
+// ...so we need one more variable to store a constant and we need to define it before we store the difference in days.
+// That makes difference in days our FOURTH variable, so let's call our THIRD variable c. 
+// c = hours per day * minutes per hour * seconds per minute * ms per sec
+// Do the math and store the value.
+
+// If all is well, you can console.log your difference in days variable and it will change depending on what date is clicked on the datepicker.
+
+// 12. There is still a problem. We need the result to be an integer.
+// Here is a link to the Math object:  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+// I bet you can figure out which method to call on your difference in days variable.
+// It's one of the ones listed under Methods in the left column of the page linked above.
+
 
