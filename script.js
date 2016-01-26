@@ -7,43 +7,44 @@ var curr_year = today.getFullYear();
 
 $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
-var resultString = "";
 
 function daysLeft() {
 	var a = $( "#datepicker" ).datepicker('getDate').getTime();
 	var b = today.getTime();
-	// c = hours per day * minutes per hour * seconds per minute * ms per sec
 	var c = 24*60*60*1000;
-
-	// here we use the native Math object to solve a problem:
 	var diffDays = Math.round((a - b)/c);
 
-	if( $('input').val() ){
-		if (diffDays < 0 ) {
-			resultString = "<p>Please pick a date in the future.</p>";
-		} else if (diffDays === 1){
-			resultString = ("<p>You only have ONE day left until " + $('input').val() + "!</p>");
-		} else {
-			resultString = ("<p>You have " + diffDays + " days left until " + $('input').val() + "!</p>");
-		}
-	} else {
-		if (diffDays < 0 ) {
-			resultString = "<p>Please pick a date in the future.</p>";
-		} else if (diffDays === 1){
-			resultString = ("<p>You only have ONE day left!</p>");
-		} else {
-			resultString = ("<p>You have " + diffDays + " days left!");
-		}
-	}
-	// return diffDays;
+// 13. You are almost there!
+// We need a variable where we can concatenate the integer value difference of days and display that in a concatenated HTML string.
+// "You have ____ days left!"
+
 };
 
 $("#datepicker").on("change", function(){
 	daysLeft();
-	$("#result").html(resultString);
+
+// 14. Now, instead of console.log, let's update the HTML string every time the user clicks a date.
+// Use jQuery to write the result string in the element with an id of 'result'
+
+_____
+
 });
 
-$("button").click(function(){
-	$("#result").addClass("showResult");
-});
+// UH-OH! We defined the variable inside daysLeft and we need the same data in our .on('change', function(){})
+// 15. Define the variable globally (with the other var's at the top of the file) and leave your references alone.
+
+
+// 16. STRETCH Challenge:
+
+// For the highly ambitious, you may write a couple if statements and customize the result HTML string accordingly.
+// Here are the possibilities I've thought of; there may be more.
+// condition 1:  there is an input but someone has selected a date in the past
+// condition 2:  there is an input and the day is tomorrow
+// condition 3:  there is an input and the date is in the future
+// condition 4:  there is NO input but someone has selected a date in the past
+// condition 5:  there is NO input and the day is tomorrow
+// condition 6:  there is NO input and the date is in the future.
+
+
+
 
