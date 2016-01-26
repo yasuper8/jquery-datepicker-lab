@@ -33,18 +33,3 @@ _____
 // UH-OH! We defined the variable inside daysLeft and we need the same data in our .on('change', function(){})
 // 15. Define the variable globally (with the other var's at the top of the file) and leave your references alone.
 
-
-// 16. STRETCH Challenge:
-
-// For the highly ambitious, you may write a couple if statements and customize the result HTML string accordingly.
-// Here are the possibilities I've thought of; there may be more.
-// condition 1:  there is an input but someone has selected a date in the past
-// condition 2:  there is an input and the day is tomorrow
-// condition 3:  there is an input and the date is in the future
-// condition 4:  there is NO input but someone has selected a date in the past
-// condition 5:  there is NO input and the day is tomorrow
-// condition 6:  there is NO input and the date is in the future.
-
-
-
-
