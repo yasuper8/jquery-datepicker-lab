@@ -12,7 +12,7 @@ $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 // You can read more about it here: 
 // Use jQuery to grab the element with an id of "datepicker" and call .datepicker() on it.
 
-_____
+// _____
 
 
 // Read more about the jQuery UI datepicker here:
@@ -21,7 +21,7 @@ _____
 
 // 6. Now we need to create a function daysLeft()
 
-_____
+// _____
 
 // 7. daysLeft needs 4 local variables.
 
