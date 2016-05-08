@@ -26,7 +26,7 @@ $("#datepicker").on("change", function(){
 // 14. Now, instead of console.log, let's update the HTML string every time the user clicks a date.
 // Use jQuery to write the result string in the element with an id of 'result'
 
-_____
+// _____
 
 });
 
