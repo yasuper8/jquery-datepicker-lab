@@ -12,9 +12,9 @@ function daysLeft() {
 	var a = $( "#datepicker" ).datepicker('getDate').getTime();
 	// solutions for 9, 10, 11 and 12 go here:
 
-	_____
-	_____
-	_____
+	// _____
+	// _____
+	// _____
 
 	// we will remove this later:
 	return a;
