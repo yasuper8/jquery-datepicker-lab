@@ -15,7 +15,7 @@ function daysLeft() {
 	var diffDays = Math.round((a - b)/c);
 
 // 13. You are almost there!
-// We need a variable where we can concatenate the integer value difference of days and display that in a concatenated HTML string.
+// We need a variable where we can store the integer value difference of days and display that in a concatenated HTML string.
 // "You have ____ days left!"
 
 };
