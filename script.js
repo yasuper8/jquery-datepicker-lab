@@ -36,7 +36,7 @@ function daysLeft() {
 		}
 	}
 	// return diffDays;
-};
+}
 
 $("#datepicker").on("change", function(){
 	daysLeft();
