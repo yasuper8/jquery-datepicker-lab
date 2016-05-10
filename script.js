@@ -47,3 +47,10 @@ $("button").click(function(){
 	$("#result").addClass("showResult");
 });
 
+
+// What's Next?
+
+// Can you change this project to store multiple dates with localStorage?
+// This project can be used as a stand-alone widget. What else might you do with this?
+
+// What are you waiting for?
