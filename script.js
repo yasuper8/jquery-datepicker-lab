@@ -19,12 +19,16 @@ function daysLeft() {
 	var diffDays = Math.round((a - b)/c);
 
 	if( $('input').val() ){
+		var localStorageKey = $('input').val();		
 		if (diffDays < 0 ) {
 			resultString = "<p>Please pick a date in the future.</p>";
 		} else if (diffDays === 1){
 			resultString = ("<p>You only have ONE day left until " + $('input').val() + "!</p>");
 		} else {
 			resultString = ("<p>You have " + diffDays + " days left until " + $('input').val() + "!</p>");
+			if(!localStorage.getItem(localStorageKey)) {
+				localStorage.setItem(localStorageKey, diffDays);	
+			}
 		}
 	} else {
 		if (diffDays < 0 ) {
