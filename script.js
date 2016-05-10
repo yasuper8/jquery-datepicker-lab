@@ -18,7 +18,7 @@ function daysLeft() {
 // We need a variable where we can concatenate the integer value difference of days and display that in a concatenated HTML string.
 // "You have ____ days left!"
 
-};
+}
 
 $("#datepicker").on("change", function(){
 	daysLeft();
