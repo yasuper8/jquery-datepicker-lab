@@ -1,1 +1,2 @@
 # jquery-form-lab
+You are on the branch `step-1`. Follow the instructions in `script.js`. Replace the underlined comments (`// ----`) with real code. When you are ready, add and commit your work and then check out the next branch:  `git checkout step-2`
