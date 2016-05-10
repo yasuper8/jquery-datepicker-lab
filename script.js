@@ -7,31 +7,21 @@ var curr_year = today.getFullYear();
 
 $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 $("#datepicker").datepicker();
+var resultString = "";
 
 function daysLeft() {
-	var a = $( "#datepicker" ).datepicker('getDate').getTime();
-	var b = today.getTime();
-	var c = 24*60*60*1000;
-	var diffDays = Math.round((a - b)/c);
+    var a = $( "#datepicker" ).datepicker('getDate').getTime();
+    var b = today.getTime();
+    var c = 24*60*60*1000;
+    var diffDays = Math.round((a - b)/c);
 
-// 13. You are almost there!
-// We need a variable where we can concatenate the integer value difference of days and display that in a concatenated HTML string.
-// "You have ____ days left!"
-
+    resultString = ("<p>You have " + diffDays + " days left!");
 }
 
 $("#datepicker").on("change", function(){
-	daysLeft();
-
-// 14. Now, instead of console.log, let's update the HTML string every time the user clicks a date.
-// Use jQuery to write the result string in the element with an id of 'result'
-
-// _____
-
+    daysLeft();
+    $("#result").html(resultString);
 });
-
-// UH-OH! We defined the variable inside daysLeft and we need the same data in our .on('change', function(){})
-// 15. Define the variable globally (with the other var's at the top of the file) and leave your references alone.
 
 
 // 16. STRETCH Challenges:
