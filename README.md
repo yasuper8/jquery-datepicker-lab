@@ -1,12 +1,11 @@
 # jquery-datepicker-lab
 
-##### Congratulations!
+##### Extra Feature
 
-You are on the final solutions branch `step-6-stretch`. 
+You are on the `step-7` branch.  This branch has an incomplete implementation of localStorage for your consideration.
 
-- How did you do?
-- Can you implement a new feature for a user to store multiple dates?
-    - How would you do this?
-    - What would be difficult about this?
-- This project can be used as a widget for something else. What might you use it for?
-- What are YOU waiting for?
+Problems with this solution:
+- Currently only uses localStorage.setItem() to set key-value pairs for new dates.
+- If user selects the wrong date, the first value remains in storage.
+- Does not use localStorage.getItem() to retrieve stored data or display to the user.
+- Does not inform user data is being stored, or give a means to clear the data.
