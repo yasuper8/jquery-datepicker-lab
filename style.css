@@ -1,9 +1,9 @@
 body {
-	background-color: #3A3427;
+	background-color: #F5F5DC;
 	margin: 0;
 }
 body h1, h3, h4, p{
-	color: #3A3427;
+	color: #F5F5DC;
 	font-family: 'Open Sans', sans-serif;
 }
 input{
@@ -21,7 +21,7 @@ input{
 }
 
 #banner{
-	background-color: #CC4A14;
+	background-color: #FA4642;
 }
 
 #banner h4{
@@ -32,7 +32,7 @@ input{
 	margin-top:-1em;
 }
 #calendar{
-	background-color: #99583D;
+	background-color: #096BB2;
 }
 
 #banner p, #calendar p{
