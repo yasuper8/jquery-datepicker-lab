@@ -14,15 +14,27 @@ function daysLeft() {
     var b = today.getTime();
     var c = 24*60*60*1000;
     var diffDays = Math.round((a - b)/c);
-
-    resultString = ("<p>You have " + diffDays + " days left!");
+    checkDatePast(diffDays);
 }
 
 $("#datepicker").on("change", function(){
     daysLeft();
     $("#result").html(resultString);
+    console.log(diffDays);
 });
 
+
+function checkDatePast(diffDays){
+	if(diffDays < -1){
+		resultString = ("<p>You have compleated it " + Math.abs(diffDays) + " ago!");
+	} if(diffDays >= 1){
+		resultString = ("<p>You have " + diffDays + " days left!</p>");
+	} if(diffDays == -1){
+		resultString = ("<p>Today is the day!</p>");
+	} if(diffDays == 0){
+		resultString = ("<p>Tomorrow is the day!</p>");
+	}
+}
 
 // 16. STRETCH Challenges:
 
