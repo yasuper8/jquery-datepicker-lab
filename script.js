@@ -12,12 +12,19 @@ $("#todayDate").html(m_names[curr_month] + ". " + curr_date + ", " + curr_year);
 // You can read more about the jQuery UI datepicker here: https://jqueryui.com/datepicker/
 // Use jQuery to grab the element with an id of "datepicker" and call .datepicker() on it:
 
-// _____
+$('#datepicker').datepicker();
 
 
 // 6. Now we need to create a function daysLeft()
 
-// _____
+function daysLeft() {
+	var a = $("#datepicker").datepicker('getDate').getTime();
+	return a; 
+}
+
+$("#datepicker").on("change", function(){
+	console.log(daysLeft());
+});
 
 // 7. daysLeft will need some local variables. Let's define the first one as `a`
 // You need to call datepicker's 'getDate' method and then you have to call the Date() object's .getTime(); method on the whole thing:
